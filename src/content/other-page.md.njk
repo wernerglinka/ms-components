@@ -1,0 +1,155 @@
+---
+title: Hello Title ;-)
+layout: sections.njk
+pageName: "otherPage"
+
+sections:
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Another Page
+    header: "h2"
+    subTitle: Temporary Page to test page transition
+    prose: |-
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
+
+      Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+
+    hasCtas: true
+    ctas:
+      - url: "/product/"
+        label: Go There
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: false
+    paddingTop: false
+    paddingBottom: false
+    backgroundColor: ""
+    targetId: ""
+    title: This is a media component !
+    header: "h2"
+    subTitle: ""
+    prose: ""
+    hasCtas: false
+    ctas:
+      - url: ""
+        label: ""
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+  
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: true
+    title: "What is a media component ?"
+    header: "h3"
+    subTitle: "Indeed, what is it?"
+    prose: |-
+      Maecenas faucibus mollis interdum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+      Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Maecenas sed diam eget risus varius blandit sit amet non magna. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vestibulum id ligula porta felis euismod semper. Nullam id dolor id nibh ultricies vehicula ut id elit.        
+
+    hasCtas: false
+    ctas:
+      - label: "Another CTA"
+        url: "/other-page/"
+        isVideoTrigger: false
+        isButton: false
+        buttonStyle: ""
+        isExternal: false
+    mediaType: Image
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1636656058/gatsby4mdx/another-tree_fl0vki"
+      alt: "a tree"
+      aspectRatio: "62.5"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+  
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: false
+    title: "Media component below the fold ?"
+    header: "h3"
+    subTitle: ""
+    prose: |-
+        This media component is located under the "fold" to test progressive image loading. 
+        
+        The site uses [cloudinary.io](https://cloudinary.com/) to store all images. Cloudinary's on-the-fly image transformations allow for a very effective progressive image with lazy load implementation. In essence a low resolution copy of the image is loaded first and when the image enters the viewport it is updated with an image that is properly sized for the available space.
+
+        Here is a very interesting talk by Jose Perez about Progressive Image Rendering.
+
+    hasCtas: true
+    ctas:
+      - label: "Play Video"
+        isExternal: false
+        isButton: false
+        buttonStyle: "primary"
+        isVideoTrigger: true
+        videoId: "S70xyRYCNdY"
+    mediaType: Video
+    video:
+      src: youtube
+      id: "S70xyRYCNdY"
+      tn: "v1636656059/gatsby4mdx/one-tree_nnl9ts.jpg"
+      aspectRatio: "56.25"
+    image:
+      src: "v1636656058/gatsby4mdx/trees-fog_dru2h3.jpg"
+      alt: "a tree"
+      aspectRatio: "62.5"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+---

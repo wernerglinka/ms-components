@@ -1,0 +1,24 @@
+{
+  "title": "New MetalsmithStarter",
+  "description": "Metalsmith Starter Website",
+  "author": "werner@glinka.co",
+  "siteURL": "https://newmsnunjucks.netlify.app/",
+  "siteOwner": "Werner Glinka",
+  "mainAddress": {
+    "street": "",
+    "misc": "",
+    "city": "",
+    "state": "",
+    "ZIP": "",
+    "tel": ""
+  },
+  "social": {
+    "twitter": "",
+    "facebook": "",
+    "linkedIn": "",
+    "github": ""
+  },
+  "imagePrefix": "https://res.cloudinary.com/glinkaco/image/upload/",
+  "imageDefault": "",
+  "audioPrefix": "https://res.cloudinary.com/glinkaco/video/upload/"
+}

@@ -1,0 +1,116 @@
+// an overlay is produced by attaching pseudo elements to the header and
+// rotating them into view when the main menu is active
+
+header:before,
+header:after {
+  content: "";
+  position: fixed;
+  left: 0;
+  transition: all 1s ease-in-out;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(50, 50, 100, 0.8);
+}
+
+header:before {
+  top: 0;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+}
+
+.menu-active header:before {
+  transform: rotate(0deg);
+}
+
+header:after {
+  bottom: 0;
+  transform: rotate(90deg);
+  transform-origin: bottom left;
+}
+
+.menu-active header:after {
+  transform: rotate(0deg);
+}
+
+
+
+#video-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3000;
+    background-color: rgba(50, 50, 100, 0.95);
+    display: none;
+
+    &.is-open {
+      display: block;
+    }
+
+    .close {
+        position: absolute;
+        z-index: 1;
+        top: 7vh;
+        right: 10vw;
+        font-size: 20px;
+        color: #fff;
+
+        &:hover {
+            cursor: pointer;
+            color: #666;
+        }
+    }
+    .responsive-wrapper {
+      position: fixed;
+      top: 10vh;
+      left: 10vw;
+      width: 80vw;
+      z-index: 1003;
+      overflow: visible;
+    }
+  
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 0;
+      padding-bottom: 56.25%;
+  
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    @keyframes fadeout {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+    &.fadeout {
+      animation-duration: 1s;
+      animation-name: fadeout;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    &.fadein {
+      display: block;
+      animation-duration: 1s;
+      animation-name: fadein;
+      animation-fill-mode: forwards;
+    }
+}

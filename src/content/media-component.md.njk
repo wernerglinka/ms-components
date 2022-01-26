@@ -1,0 +1,282 @@
+---
+title: Hello Title ;-)
+layout: sections.njk
+pageName: "home"
+
+sections:
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: false
+    paddingTop: false
+    paddingBottom: false
+    backgroundColor: ""
+    targetId: ""
+    title: This is a media component !
+    header: "h2"
+    subTitle: ""
+    prose: ""
+    hasCtas: false
+    ctas:
+      - url: ""
+        label: ""
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+  
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: true
+    title: "What is a media component ?"
+    header: "h3"
+    subTitle: "Indeed, what is it?"
+    prose: |-
+      A staple of almost any corporate website, the media component is a construct that uses an image and some text to get a point across. Or as Chris Coyier would say:
+      _"The Media Object pattern is: image thingy on the left, heading and text on the right."_
+
+      Read more about this in the [CSS-Tricks](https://css-tricks.com/) article **[The Media Object, A Bunch of Ways](https://css-tricks.com/media-object-bunch-ways/)**
+
+      In this implementation the "image thingy" can be:
+
+      - an image
+      - a video
+      - an animated Lottie svg
+      - an icon
+      - an audio player
+
+    hasCtas: false
+    ctas:
+      - label: "Another CTA"
+        url: "/other-page/"
+        isVideoTrigger: false
+        isButton: false
+        buttonStyle: ""
+        isExternal: false
+    mediaType: Image
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1636656058/gatsby4mdx/trees_ovi9xa.jpg"
+      alt: "a tree"
+      aspectRatio: "62.5"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: true
+    paddingBottom: true
+    reverse: false
+    title: "Media component with an icon"
+    header: "h3"
+    subTitle: ""
+    prose: |-
+        In this example the order of image and text have been reversed, instead of an image we show an icon and a cta is diplayed below the text.
+        
+        Icons are stored in svg code and injected into the Nunjucks templates via its name.
+    hasCtas: true
+    ctas:
+      - label: "Let's go shopping"
+        url: "https://amazon.com"
+        isVideoTrigger: false
+        isButton: false
+        buttonStyle: ""
+        isExternal: true
+    mediaType: Icon
+    video:
+      src: ""
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: ""
+      alt: ""
+      aspectRatio: ""
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: cleanIndustry
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: true
+    title: "Media component with a video"
+    header: "h3"
+    subTitle: ""
+    prose: |-
+        This media component is located under the "fold" to test progressive image loading. 
+        
+        The site uses [cloudinary.io](https://cloudinary.com/) to store all images. Cloudinary's on-the-fly image transformations allow for a very effective progressive image with lazy load implementation. In essence a low resolution copy of the image is loaded first and when the image enters the viewport it is updated with an image that is properly sized for the available space.
+
+        Here is a very interesting talk by Jose Perez about Progressive Image Rendering.
+
+    hasCtas: true
+    ctas:
+      - label: "Play Video"
+        isExternal: false
+        isButton: false
+        buttonStyle: "primary"
+        isVideoTrigger: true
+        videoId: "S70xyRYCNdY"
+    mediaType: Video
+    video:
+      src: youtube
+      id: "S70xyRYCNdY"
+      tn: "v1636656059/gatsby4mdx/one-tree_nnl9ts.jpg"
+      aspectRatio: "56.25"
+    image:
+      src: "v1636656058/gatsby4mdx/trees-fog_dru2h3.jpg"
+      alt: "a tree"
+      aspectRatio: "62.5"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: false
+    title: "Media component with an audio player"
+    header: "h3"
+    subTitle: ""
+    prose: |-
+        Here is an example of an audio player with a nice image background.
+
+        <a href="#at-top">to top please</a>
+
+    hasCtas: false
+    ctas:
+      - label: ""
+        url: ""
+        isVideoTrigger: false
+        isButton: false
+        buttonStyle: ""
+        isExternal: false
+    mediaType: Audio
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1636656059/gatsby4mdx/trees-water_fe7obz.jpg"
+      alt: "a tree"
+      aspectRatio: "56.25"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: "v1636656059/gatsby4mdx/trees-water_fe7obz.jpg"
+      aspectRatio: "56.25"
+      ogg: "v1639165770/gatsby4mdx/audio/sample-ogg-file_fmjjrl.ogg"
+      mpeg: "v1639165774/gatsby4mdx/audio/sample-mp3-file_hwsxlc.mp3"
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: true
+    title: "Here is an example of a Lottie animation"
+    header: "h3"
+    subTitle: ""
+    prose: |-
+        Animated svg in Lottie format. Lottie is an open source animation file format that’s tiny, high quality, interactive, and can be manipulated at runtime. The top 500 apps on the App store now use Lottie to engage users and enhance conversions.
+
+    hasCtas: true
+    ctas:
+      - label: "Read more about Lottie"
+        url: "https://lottiefiles.com/lottie"
+        isVideoTrigger: false
+        isButton: true
+        buttonStyle: "primary"
+        isExternal: true
+    mediaType: Lottie
+    video:
+      src: ""
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: ""
+      alt: "a tree"
+      aspectRatio: "56.25"
+    lottieData:
+      src: "/assets/animations/example3.json"
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+---

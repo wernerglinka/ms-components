@@ -1,0 +1,40 @@
+<link rel="icon" href="/assets/favicon.png"/>
+<meta charset="utf-8"/>
+<meta httpEquiv="x-ua-compatible" content="ie=edge"/>
+
+{# needed for browser hints to work for cloudinary images #}
+<meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width"/>
+
+<meta name="HandheldFriendly" content="True"/>
+<meta name="MobileOptimized" content="320"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta httpEquiv="cleartype" content="on"/>
+<meta httpEquiv="Accept-CH" content="DPR, Viewport-Width, Width"/>
+
+<title>{{data.site.title}}</title>
+<meta name="description" content="{{data.site.description}}"/>
+<meta name="author" content="{{data.site.author}}"/>
+
+<link rel="canonical" href="{{ data.site.siteURL }}"/>
+
+{# social tags #}
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content={{data.site.description}}/>
+<meta name="twitter:title" content={{data.site.title}}/>
+<meta name="twitter:description" content={{data.site.description}}/>
+<meta name="twitter:creator" content={{data.site.author}}/>
+<meta name="twitter:image" content={{data.site.socialImage}}/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:type" content="article"/>
+<meta property="og:title" content={{data.site.title}}/>
+<meta property="og:description" content={{data.site.description}}/>
+<meta property="og:url" content={{ data.site.siteURL }}/>
+<meta property="og:site_name" content="{{ data.site.title }}"/>
+<meta property="og:image" content={{data.site.socialImage}}/>
+<meta property="og:updated_time" content=""}/>
+
+{% include "./head-scripts.njk" %}
+
+{# site assets #}
+<link rel="stylesheet" href="/assets/fonts/fonts.css">
+<link rel="stylesheet" href="/assets/styles/styles.css">

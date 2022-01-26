@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include "partials/head.njk" %}
+  </head>
+</h1>
+
+<body>
+  <div id="at-top"></div>
+  {% include "partials/header.njk" %}
+
+  <main id="swup" class="transition-fade">
+    {% block body %}
+      This is the default contents
+    {% endblock %}
+  </main>
+
+  {% include "partials/footer.njk" %}
+  {% include "partials/scripts.njk" %}
+
+</body>
+</html>

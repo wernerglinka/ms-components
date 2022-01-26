@@ -1,0 +1,47 @@
+.video {
+  button {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    position: relative;
+
+    .play-button {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 1;
+      margin: -30px 0 0 -30px;
+      width: 60px;
+      height: 60px;
+      border-radius: 30px;
+      background-color: #fff;
+      transition: all 0.5s ease-in-out;
+      cursor: pointer;
+
+      &:after {
+        position: absolute;
+        top: 12px;
+        left: 20px;
+        display: block;
+        content: "";
+        width: 0;
+        height: 0;
+        border-width: 18px 28px;
+        border-style: solid;
+        border-color: transparent transparent transparent #000;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
+    &:hover {
+      .play-button {
+        background-color: #666;
+
+        &:after {
+          border-color: transparent transparent transparent #fff;
+        }
+      }
+    }
+  }
+}

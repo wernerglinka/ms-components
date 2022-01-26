@@ -1,0 +1,59 @@
+{
+  "menu": [
+    {
+      "icon": "house",
+      "label": "Go Home",
+      "description": "Where it all starts.",
+      "url": "/",
+      "submenuID": "",
+      "submenuClass": "",
+      "isButton": false,
+      "buttonClass": "",
+      "isExternal": false
+    },
+    {
+      "icon": "feather",
+      "label": "Other Page",
+      "description": "Maecenas sed diam eget risus varius blandit sit amet non magna",
+      "url": "/other-page",
+      "submenuID": "",
+      "submenuClass": "",
+      "isButton": false,
+      "buttonClass": "",
+      "isExternal": false
+    },
+    {
+      "icon": "image",
+      "label": "What's a Media Component?",
+      "description": "Explore what the media component can do.",
+      "url": "/media-component",
+      "submenuID": "",
+      "submenuClass": "",
+      "isButton": false,
+      "buttonClass": "",
+      "isExternal": false
+    },
+    {
+      "icon": "download",
+      "label": "A Page from Wordpress",
+      "description": "Example of a page that is build with ACF in Wordpress and downloaded via API",
+      "url": "/a-wordpress-page",
+      "submenuID": "",
+      "submenuClass": "",
+      "isButton": false,
+      "buttonClass": "primary",
+      "isExternal": true
+    },
+    {
+      "icon": "database",
+      "label": "Go Apple",
+      "description": "Example of an external link in the main menu.",
+      "url": "https://apple.com",
+      "submenuID": "",
+      "submenuClass": "",
+      "isButton": false,
+      "buttonClass": "primary",
+      "isExternal": true
+    }
+  ]
+}

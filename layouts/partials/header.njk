@@ -1,0 +1,41 @@
+{% from "../partials/icon.njk" import icon %}
+
+<div class="header-wrapper js-header">
+  <header>
+    <div class="container">
+      <div id="brand">
+        {% set iconSource = "logo" %}
+        <a href="/">{{ icon(iconSource) }}</a>
+      </div>
+
+      <div id="main-menu" class="js-main-menu">
+        <ul>
+          {% for menuItem in nav.menu %}
+            <li>
+              {% set iconSource = menuItem.icon %}
+              {{ icon(iconSource) }}
+              <div>
+                {% if menuItem.isExternal %}
+                  <a href={{ menuItem.url}} target="_blank" rel="noopener noreferrer">{{ menuItem.label }}</a>
+                {% else %}
+                  {% if menuItem.url === "/" %}
+                    {% set path = "home" %}
+                  {% else %}
+                    {% set path = menuItem.url %}
+                  {% endif %}
+                  <a href={{ menuItem.url}} class="{{ path | trimSlashes }}">{{ menuItem.label }}</a>
+                {% endif %}
+                <p>{{ menuItem.description }}</p>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <button id="hamburger" class="js-hamburger">
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>
+</div>

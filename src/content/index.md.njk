@@ -1,0 +1,358 @@
+---
+title: Hello Title ;-)
+layout: sections.njk
+pageName: "home"
+
+sections:
+  - component: banner
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Werner's Metalsmith Sandbox
+    header: "h1"
+    subTitle: My personal sandbox to experiment with Metalsmith
+    prose: This site is build in the style of a company marketing site. The components that I use on this site are bare-bones interpretations of universal information presentation patterns that can be found anywhere.
+    hasCtas: true
+    ctas:
+      - url: ""
+        label: Learn about Metalsmith
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+        isVideoTrigger: true
+        videoId: "IZvEf3JpESU"
+    mediaType: Image
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1639770073/gatsby4mdx/metalsmith-illustration_tibczp.png"
+      alt: "Metalsmith Javascript"
+      aspectRatio: "56.25"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Why Metalsmith?
+    header: "h2"
+    subTitle: ...never heard of it?
+    prose: |-
+      I came across [Metalsmith](https://www.metalsmith.io/) in 2017 when I was researching options for a static site generator. Metalsmith was appealing because it is Javascript based and very flexible. Turns out Metalsmith is technology-agnostic when it comes to how to build a static website. It just converts files from a source directory into javascript objects and provides an API for plugins to transform/manipulate these objects. Once all plugins have been used, the objects are converted back to files and loaded into a destination directory.
+
+      I have used Metalsmith to build several websites for technology companies and non-profits. But over the last couple of years clients have shown a strong preference for Gatsby so Metalsmith has not been a focus of mine for a while. I use this site to exercise my Metalsmith skills. The repo for this site can be found [here](https://github.com/wernerglinka/newMS). This may be used as a learning tool or starting point for developers who are new to Metalsmith.
+
+    hasCtas: true
+    ctas:
+      - url: "/product/"
+        label: Go There
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: false
+    paddingTop: false
+    paddingBottom: false
+    backgroundColor: ""
+    targetId: ""
+    title: So how is this site build?
+    prose: |-
+      I am using Gulp4 to process all assets first and then Metalsmith to build the site. Styles are written in SCSS and scripts in Javasript. 
+      Content is written in [Markdown](https://www.markdownguide.org/) and templates are coded with [Nunjucks](https://mozilla.github.io/nunjucks/). 
+
+      I use Swup for page transitions and page prefetching to provide the user with a smooth Single Page App (SPA) experience... or as much as one can do without actually building an SPA.
+
+      Some implementation details to check out:
+      - Page transition with [Swup](https://swup.js.org/).
+      - Page backgrounds with [Gradien Magic](https://www.gradientmagic.com/) CSS.
+      - Simple [Feather](https://feathericons.com/) icons.
+      - Images hosted on [cloudinary.io](https://cloudinary.com/).
+      - All images are loaded with Low Res Placeholders first and then replaced when the image enters the browser viewport (lazy load).
+
+    header: "h2"
+    subTitle: ""
+    hasCtas: false
+    ctas:
+      - url: ""
+        label: ""
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+  
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: true
+    paddingBottom: true
+    reverse: true
+    title: "About Nunjucks"
+    header: "h3"
+    subTitle: "A rich and powerful templating language for JavaScript"
+    prose: |-
+        That's what they say: You've been looking for a more sophisticated templating engine for JavaScript. Here it is.
+          - **Rich** Powerful language with block inheritance, autoescaping, macros, asynchronous control, and more. Heavily inspired by jinja2
+          - **Fast & Lean** High-performant. Small 8K gzipped runtime with precompiled templates in the browser
+          - **Extensible** Crazy extensible with custom filters and extensions
+          - **Everywhere** Available in node and all modern web browsers, with thorough precompilation options
+
+    hasCtas: true
+    ctas:
+      - label: "Visit Nunjucks"
+        url: "https://mozilla.github.io/nunjucks/"
+        isVideoTrigger: false
+        isButton: false
+        buttonStyle: ""
+        isExternal: true
+    mediaType: Image
+    video:
+      src: ""
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1639776555/gatsby4mdx/nunjucks-logo_w9ebbh.jpg"
+      alt: "nunjucks"
+      aspectRatio: "56.25"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  
+  
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: false
+    title: "What is Swup?"
+    header: "h3"
+    subTitle: ""
+    prose: |-
+      In their own words: "Think of swup as being pjax on steroids. The concepts are similar to those used in barba.js or other transition libraries, but swup gives more attention to ease of use and flexibility.
+      Apart from loading the contents of the new page and replacing required parts in DOM, swup is built around CSS transition. The main thing that needs to be done is defining hidden state in CSS. Swup detects the end of transition of animated elements and proceeds to replacing the content of containers and animating your page back. For the animations based on CSS to be possible, swup uses several classes that are assigned to the html tag through the process of page transition."
+
+    hasCtas: true
+    ctas:
+      - label: "Visit Swup"
+        url: "https://swup.js.org/"
+        isVideoTrigger: false
+        isButton: true
+        buttonStyle: "primary"
+        isExternal: true
+    mediaType: Image
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1639775883/gatsby4mdx/swup-logo_ktavg7.png"
+      alt: "a tree"
+      aspectRatio: "62.5"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: true
+    title: "And what about these georgeous background gradients?"
+    header: "h3"
+    subTitle: "Gradient Magic is the largest gallery of CSS Gradients on the web, with new and exciting gradients added all the time"
+    prose: |-
+        CSS Gradients are fancy patterns created via CSS, primarily used to add color or patterns to a website. They have many benefits over images, including being easier to work with and much smaller in size.
+
+        As long as you don't re-distribute or re-sell gradients or derived images from gradientmagic.com, you may use them on personal or commercial projects with attribution.   
+
+    hasCtas: true
+    ctas:
+      - label: "Visit Gradient Magic"
+        url: "https://www.gradientmagic.com/"
+        isExternal: true
+        isButton: false
+        buttonStyle: "primary"
+        isVideoTrigger: true
+        videoId: ""
+    mediaType: Image
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1639777526/gatsby4mdx/gradient-magic_ohfafp.jpg"
+      alt: "gradient magic logo"
+      aspectRatio: "56.25"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: false
+    title: "And about these Feather icons"
+    header: "h3"
+    subTitle: "They are simply beautiful and open source"
+    prose: |-
+        You can get them [here](https://feathericons.com/)!
+
+    hasCtas: false
+    ctas:
+      - label: ""
+        url: ""
+        isVideoTrigger: false
+        isButton: false
+        buttonStyle: ""
+        isExternal: false
+    mediaType: Icon
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: ""
+      alt: ""
+      aspectRatio: ""
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: "Feather"
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+
+  - component: media
+    animateSection: true
+    inContainer: true
+    hasBackground: false
+    bgColor: ""
+    bgIsDark: false
+    marginTop: true
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: false
+    reverse: true
+    title: "Digital Asset Management with Cloudinary"
+    header: "h3"
+    subTitle: "Images are easy"
+    prose: |-
+        Cloudinary is used to store, transform, optimize, and deliver all site media assets — images and videos with easy-to-use APIs. This service takes the pain of image management and responsive image set creations away. You just tell cloudinary, in the image url, what the image size should be and more. Click here to [get started](https://cloudinary.com/documentation/how_to_integrate_cloudinary).
+
+        Check out the responsive image javascript module to see this in action.
+
+    hasCtas: false
+    ctas:
+      - label: ""
+        url: ""
+        isVideoTrigger: false
+        isButton: true
+        buttonStyle: "primary"
+        isExternal: true
+    mediaType: Image
+    video:
+      src: ""
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1639779216/gatsby4mdx/cloudinary-logo_njlkd9.jpg"
+      alt: "cloudinary"
+      aspectRatio: "56.25"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+---
