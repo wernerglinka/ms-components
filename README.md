@@ -54,11 +54,11 @@ The sectioned page content is defined in **sections.njk**
   </section>
 {% endblock %}
 ```
-Here, the `main-content` is rendered by looping over a list of sections which are defined as components in the pages frontmatter. The sections are rendered in the order they appear in the frontmatter, changing the component position in the list will also change the render position on the page.
+Here, the `main-content` is rendered by looping over a list of sections which are defined as components in the page frontmatter. The sections are rendered in the order they are listed in the frontmatter, e.g., changing the component position in the list will also change the render position on the page.
 
 The component is coded as a Nunjucks macro, which takes three parameters:
 
-- **name**  the name** of the component
+- **name** the component name
 - **params** the content
 - **site** global site properties
 
