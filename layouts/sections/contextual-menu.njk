@@ -1,0 +1,19 @@
+{% from "../partials/icon.njk" import icon %}
+
+{# this section receives props params and site #}
+
+<section class="section-contextual-menu {% if params.paddingTop %}paddingTop{% endif %} {% if params.paddingBottom %}paddingBottom{% endif %}">
+  <div class="content">
+    {% set info = params %}
+
+    <ul class="contextual-menu">
+    {% for menuItem in info.menu %}  
+      <li>
+        {% set iconSource = menuItem.icon %}
+        {{ icon(iconSource) }}
+        <a href={{ menuItem.url }}>{{ menuItem.label }}</a>
+      </li>
+    {% endfor %}  
+    </ul>
+  </div>
+</section>

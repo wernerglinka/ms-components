@@ -26,7 +26,7 @@ const modalVideo = (function() {
         videoOverlay.classList.add('fadein');
 
         // prevent scrolling under the overlay
-        document.body.classList.add('modalActive');
+        document.body.classList.add('modal-active');
         
         // we are using the same player for all videos
         // load the appropriate video ID
@@ -73,7 +73,7 @@ const modalVideo = (function() {
       videoOverlay.classList.add('fadeout')
       
       // allow scrolling again
-      document.body.classList.remove('modalActive');
+      document.body.classList.remove('modal-active');
     });
   };
 
@@ -103,7 +103,7 @@ const modalVideo = (function() {
         }, { once: true });
         videoOverlay.classList.add('fadeout')
         
-        document.body.classList.remove('modalActive');
+        document.body.classList.remove('modal-active');
         break;
 
       case YT.PlayerState.CUED:

@@ -16,17 +16,17 @@ sections:
     targetId: ""
     title: Metalsmith Components
     header: "h1"
-    subTitle: Demonstrate the use of "sectioned" pages
-    prose: This site is build in the style of a company marketing site. The components on this site are bare-bone interpretations of universal information presentation patterns that can be found anywhere.
+    subTitle: Demonstrating the use of "sectioned" pages
+    prose: This site is build in the style of a company marketing site. The components on this site are bare-bone interpretations of universal information presentation patterns that can be found anywhere. The source code for this site can be found on GitHub.
     hasCtas: true
     ctas:
-      - url: ""
-        label: Learn about Metalsmith
-        isExternal: false
+      - url: "https://github.com/wernerglinka/ms-components"
+        label: Check the Source
+        isExternal: true
         isButton: true
         buttonStyle: "primary"
-        isVideoTrigger: true
-        videoId: "IZvEf3JpESU"
+        isVideoTrigger: false
+        videoId: ""
     mediaType: Image
     video:
       src: youtube
@@ -61,10 +61,10 @@ sections:
     targetId: ""
     title: How is this site build?
     prose: |-
-      I am using Gulp4 to process all assets first and then Metalsmith to build the site. Styles are written in SCSS and scripts in Javasript. 
+      Gulp4 is used to process all assets first and then Metalsmith to build the site. Styles are written in SCSS and scripts in Javasript. 
       Content is written in [Markdown](https://www.markdownguide.org/) and templates are coded with [Nunjucks](https://mozilla.github.io/nunjucks/). 
 
-      I use Swup for page transitions and page prefetching to provide the user with a smooth Single Page App (SPA) experience... or as much as one can do without actually building an SPA.
+      Swup is used for page transitions and page prefetching to provide the user with a smooth Single Page App (SPA) experience... or as much as one can do without actually building an SPA.
 
       Some implementation details to check out:
       - Page transition with [Swup](https://swup.js.org/).
@@ -96,13 +96,12 @@ sections:
     reverse: true
     title: "About Nunjucks"
     header: "h3"
-    subTitle: "A rich and powerful templating language for JavaScript"
+    subTitle: "A powerful templating language for JavaScript"
     prose: |-
-        That's what they say: You've been looking for a more sophisticated templating engine for JavaScript. Here it is.
-          - **Rich** Powerful language with block inheritance, autoescaping, macros, asynchronous control, and more. Heavily inspired by jinja2
-          - **Fast & Lean** High-performant. Small 8K gzipped runtime with precompiled templates in the browser
-          - **Extensible** Crazy extensible with custom filters and extensions
-          - **Everywhere** Available in node and all modern web browsers, with thorough precompilation options
+          - Templating language with block inheritance, autoescaping, macros, asynchronous control, and more. Heavily inspired by jinja2
+          - High-performant. Small 8K gzipped runtime with precompiled templates in the browser
+          - Extensible with custom filters and extensions
+          - Available in node and all modern web browsers, with thorough precompilation options
 
     hasCtas: true
     ctas:

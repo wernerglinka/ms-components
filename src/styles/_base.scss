@@ -23,7 +23,7 @@ ol {
 }
 
 // class attached to body when overlay is open. prevents scrolling under overlay
-.modalActive, .menuActive {
+.modal-active, .menu-active {
   overflow: hidden;
 }
 

@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const browserSync = require('browser-sync').create();
 const util = require('gulp-util');
+const fs = require('fs');
+const path = require('path');
 
 // get fonts
 const processFonts = require('./gulp-tasks/get-google-fonts');
@@ -22,6 +24,9 @@ const isProduction = !!util.env.production;
 // utility variable used to check all links
 const isLinkCheck = !!util.env.linkcheck;
 
+// get content of 404.htm to display under the wrong url
+const content_404 = fs.readFileSync(path.join(__dirname, 'build/404.html'));
+
 // Function to reload the browser
 function reload(done) {
   browserSync.reload();
@@ -31,13 +36,20 @@ function reload(done) {
 // Function to watch all relevant source files and update browser accordingly
 // source: https://browsersync.io/docs/gulp
 // this function is only used during site development
+// 404 display source: https://github.com/browsersync/browser-sync/issues/1398
 function watchSite(done) {
   if (!isProduction && !isLinkCheck) {
     browserSync.init({
       server: {
         baseDir: './build/',
       },
-    });
+    }, (err, bs) => {
+      bs.addMiddleware("*", (req, res) => {
+          // Provides the 404 content without redirect.
+          res.write(content_404);
+          res.end();
+      });
+  });
 
     gulp.watch(
       'src/scripts/**/*.js',

@@ -8,8 +8,14 @@ const navigation = (function() {
 
   const init = () => {
     const header = document.querySelector(".js-header");
+    const homeLink = document.querySelector(".js-home-link");
     const mainMenu = document.querySelector(".js-main-menu");
     const page = document.body;
+
+    homeLink.addEventListener("click", e => {
+      // click on home link closes the main navigation and the overlay
+      page.classList.remove("menu-active") 
+    })
 
     header.addEventListener("click", e => {
       // click on hamburger opens/closes the overlay and the main navigation
