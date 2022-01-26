@@ -54,38 +54,12 @@ sections:
     animateSection: false
     inContainer: true
     marginTop: false
-    marginBottom: true
-    paddingTop: false
-    paddingBottom: true
-    backgroundColor: ""
-    targetId: ""
-    title: Why Metalsmith?
-    header: "h2"
-    subTitle: ...never heard of it?
-    prose: |-
-      I came across [Metalsmith](https://www.metalsmith.io/) in 2017 when I was researching options for a static site generator. Metalsmith was appealing because it is Javascript based and very flexible. Turns out Metalsmith is technology-agnostic when it comes to how to build a static website. It just converts files from a source directory into javascript objects and provides an API for plugins to transform/manipulate these objects. Once all plugins have been used, the objects are converted back to files and loaded into a destination directory.
-
-      I have used Metalsmith to build several websites for technology companies and non-profits. But over the last couple of years clients have shown a strong preference for Gatsby so Metalsmith has not been a focus of mine for a while. I use this site to exercise my Metalsmith skills. The repo for this site can be found [here](https://github.com/wernerglinka/newMS). This may be used as a learning tool or starting point for developers who are new to Metalsmith.
-
-    hasCtas: true
-    ctas:
-      - url: "/product/"
-        label: Go There
-        isExternal: false
-        isButton: true
-        buttonStyle: "primary"
-
-  - component: intro
-    disabled: false
-    animateSection: false
-    inContainer: true
-    marginTop: false
     marginBottom: false
     paddingTop: false
     paddingBottom: false
     backgroundColor: ""
     targetId: ""
-    title: So how is this site build?
+    title: How is this site build?
     prose: |-
       I am using Gulp4 to process all assets first and then Metalsmith to build the site. Styles are written in SCSS and scripts in Javasript. 
       Content is written in [Markdown](https://www.markdownguide.org/) and templates are coded with [Nunjucks](https://mozilla.github.io/nunjucks/). 
