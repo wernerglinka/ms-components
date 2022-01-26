@@ -24,9 +24,6 @@ const isProduction = !!util.env.production;
 // utility variable used to check all links
 const isLinkCheck = !!util.env.linkcheck;
 
-// get content of 404.htm to display under the wrong url
-const content_404 = fs.readFileSync(path.join(__dirname, 'build/404.html'));
-
 // Function to reload the browser
 function reload(done) {
   browserSync.reload();
@@ -39,6 +36,9 @@ function reload(done) {
 // 404 display source: https://github.com/browsersync/browser-sync/issues/1398
 function watchSite(done) {
   if (!isProduction && !isLinkCheck) {
+    // get content of 404.htm to display under the wrong url
+    const content_404 = fs.readFileSync(path.join(__dirname, 'build/404.html'));
+
     browserSync.init({
       server: {
         baseDir: './build/',
