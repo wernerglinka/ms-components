@@ -1,10 +1,13 @@
 {% from "../partials/icon.njk" import icon %}
+{% from "../partials/text.njk" import text %}
 
 {# this section receives props params and site #}
 
 <section class="section-contextual-menu {% if params.paddingTop %}paddingTop{% endif %} {% if params.paddingBottom %}paddingBottom{% endif %}">
   <div class="content">
     {% set info = params %}
+
+    {{ text(info) }}
 
     <ul class="contextual-menu">
     {% for menuItem in info.menu %}  

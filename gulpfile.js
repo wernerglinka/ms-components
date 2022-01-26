@@ -36,7 +36,9 @@ function reload(done) {
 // 404 display source: https://github.com/browsersync/browser-sync/issues/1398
 function watchSite(done) {
   if (!isProduction && !isLinkCheck) {
-    // get content of 404.htm to display under the wrong url
+    // get content of 404.htm to display under the wrong url 
+    // only in dev, in production this needs to be done on the server
+    // Netlify picks up 404.html automatically
     const content_404 = fs.readFileSync(path.join(__dirname, 'build/404.html'));
 
     browserSync.init({

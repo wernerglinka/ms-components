@@ -1,0 +1,90 @@
+---
+title: Intro Component
+layout: sections.njk
+pageName: "introComponent"
+
+sections:
+  - component: banner
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Page Banner Component
+    header: "h1"
+    subTitle: Similar to the media component...
+    prose: ... but meant to be sitting atop the page. 
+    hasCtas: true
+    ctas:
+      - url: "/components/"
+        label: Back to components
+        isExternal: true
+        isButton: true
+        buttonStyle: "primary"
+        isVideoTrigger: false
+        videoId: ""
+    mediaType: Image
+    video:
+      src: youtube
+      id: ""
+      tn: ""
+      aspectRatio: ""
+    image:
+      src: "v1639770073/gatsby4mdx/metalsmith-illustration_tibczp.png"
+      alt: "Metalsmith Javascript"
+      aspectRatio: "56.25"
+    lottieData:
+      src: ""
+      control:
+        autoplay: true
+        loop: true
+    icon: ""
+    audio:
+      bgImage: ""
+      aspectRatio: ""
+      ogg: ""
+      mpeg: ""
+  
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: ""
+    header: "h1"
+    subTitle: ""
+    prose: |-
+      The Page Banner Component uses the following content fields:
+
+      - Title
+      - Sub title
+      - Prose
+      - hasCtas (_boolean, if true one or more CTA(s) will be displayed_)
+      - CTAs (_a set of one or more CTAs_)
+      - mediaType (_selects the either Image, Video, Audio, Icon or a Lottie animation_)
+      - video (_video details_)
+      - audio (_audio details_)
+      - image (_image details_)
+      - icon (_icon details_)
+      - lottie (lottie details_)
+
+      To get a better idea of what these media choices are, check the [media component page.
+      ](/components/media/)
+    hasCtas: false
+    ctas:
+      - url: ""
+        label: ""
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+
+---
