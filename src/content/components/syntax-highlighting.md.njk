@@ -1,0 +1,58 @@
+---
+title: Comment about Syntax Highlighting
+layout: sections.njk
+pageName: "syntaxHighlighting"
+
+sections:
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Comment about code syntax highlighting
+    header: "h1"
+    subTitle: "... with Prism"
+    prose: |-
+      Syntax Highlighting is done with a forked version of Metalsmith-Prism. The fork can be found [here](https://github.com/wernerglinka/metalsmith-prism). As the name suggests this plugin uses [PrismJS](https://prismjs.com/) to do the work. In its current state, as of Jan 28, 2022,  it supports line numbers and all dependencies are up-to-date. To use it install it with 
+
+      ```bash
+      npm install git+https://github.com/wernerglinka/metalsmith-prism
+      ```
+
+      The plugin will be available on NPM soon.
+
+      Use the plugin as usual
+
+      ```javascript
+        const prism = require('metalsmith-prism');
+
+        ...
+          .use(prism({
+            lineNumbers: true,
+            preLoad: ["java", "scala"]
+          }))
+        ...
+
+      ```
+      **The plugin will add all necessary hooks to the code so styles can be applied. Themes or styles are not applied by the plugin but with a style sheet at this point.**
+
+
+    hasCtas: true
+    ctas:
+      - url: "/components/"
+        label: "A Button Link"
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+      - url: "/components/"
+        label: "A Text Link"
+        isExternal: false
+        isButton: false
+        buttonStyle: "primary"
+
+---
