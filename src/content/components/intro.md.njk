@@ -34,6 +34,27 @@ sections:
       ### As a section header
       This component may be used anywhere in a page. Add it before a set of media components to provide some context for the following components.
 
+      ### Insert a code snippet with syntax highlighting
+
+      #### A javascript code snippet
+
+      ```javascript
+        const variable = "we are testing";
+        const variablePlus = `${variable} and more...`;
+        console.log(variablePlus);
+
+      ```
+      #### A scala code snippet
+      ```scala
+        object MyClass {
+          def adder(a:Int, b: Int) = a + b;
+
+          def main(args: Array[String]) {
+            print("sum of a and b is " + adder(225,140));
+          }
+        }
+      ```
+
     hasCtas: true
     ctas:
       - url: "/components/"

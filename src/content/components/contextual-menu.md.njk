@@ -1,0 +1,66 @@
+---
+title: Contextual Menu
+layout: sections.njk
+pageName: "contextualMenu"
+
+sections:
+  - component: intro
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: true
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Contextual Menu
+    header: "h1"
+    subTitle: List of site links
+    prose: |-
+      This component is used on the components overview page to list all components. It is a simple list that uses the fields:
+
+      - Title
+      - Sub title
+      - Menu 
+          - Icon
+          - Label
+          - URL
+
+    hasCtas: false
+    ctas:
+      - url: ""
+        label: ""
+        isExternal: false
+        isButton: true
+        buttonStyle: "primary"
+  
+  - component: contextual-menu
+    disabled: false
+    animateSection: false
+    inContainer: true
+    marginTop: false
+    marginBottom: false
+    paddingTop: false
+    paddingBottom: true
+    backgroundColor: ""
+    targetId: ""
+    title: Components List
+    header: "h2"
+    subTitle: ""
+    menu:
+      - label: "Intro"
+        url: "/components/intro"
+        icon: "thumbs-up"
+      - label: "Contextual Menu"
+        url: "/components/contextual-menu"
+        icon: "thumbs-up"
+      - label: "Media"
+        url: "/components/media"
+        icon: "thumbs-up"
+      - label: "Page Banner"
+        url: "/components/page-banner"
+        icon: "sidebar"
+      
+
+---

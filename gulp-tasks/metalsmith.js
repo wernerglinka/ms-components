@@ -8,6 +8,7 @@ const permalinks = require('@metalsmith/permalinks');
 const writeMetadata = require('metalsmith-writemetadata');
 const linkcheck = require('metalsmith-linkcheck');
 const msif = require('metalsmith-if');
+const prism = require('metalsmith-prism');
 const CaptureTag = require('nunjucks-capture');
 
 const util = require('gulp-util');
@@ -92,6 +93,11 @@ module.exports = function metalsmith(callback) {
 
     // layouts MUST come after permalinks so the template has access to the "path" variable
     .use(layouts(templateConfig))
+
+    .use(prism({
+      lineNumbers: true,
+      preLoad: ["java", "scala"]
+    }))
 
     .use(
       assets({
