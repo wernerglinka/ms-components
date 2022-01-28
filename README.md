@@ -2,6 +2,8 @@
 
 This site documents a component based approach to building a website with Metalsmith and Nunjucks. Rather then building pages this methodology uses individual sections to compose pages. 
 
+Site at: https://ms-page-sections.netlify.app/
+
 ## Pages
 
 Pages are build using Nunjucks inheritance. In this case all pages share a common ancestor **layout.njk**
