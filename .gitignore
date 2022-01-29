@@ -6,3 +6,4 @@ build
 build-notes
 .cache
 .tmp-gulp-compile-*
+.env

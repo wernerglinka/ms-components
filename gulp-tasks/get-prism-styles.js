@@ -1,8 +1,6 @@
 const gulp = require('gulp');
 const rename = require("gulp-rename");
-require('dotenv').config({
-	path: '../.env'
-})
+require('dotenv');
 
 module.exports = function () {
 	const theme = process.env.PRISM_THEME;
