@@ -8,6 +8,8 @@ const path = require('path');
 const processFonts = require('./gulp-tasks/get-google-fonts');
 // process styles 
 const processStyles = require('./gulp-tasks/process-styles');
+// get prism styles
+const getPrismStyles = require('./gulp-tasks/get-prism-styles');
 // process scripts
 const processScripts = require('./gulp-tasks/process-scripts');
 // clean build folder
@@ -76,6 +78,7 @@ exports.default = gulp.series(
   processScripts,
   processFonts,
   processStyles,
+  getPrismStyles,
   metalsmith,
   watchSite
 );
