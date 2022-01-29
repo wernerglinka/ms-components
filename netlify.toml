@@ -1,0 +1,4 @@
+[build]
+  environment = {
+    PRISM_THEME=tomorrow
+  }  
