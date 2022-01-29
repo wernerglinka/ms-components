@@ -88,5 +88,6 @@ exports.buildProd = gulp.series(
   processAnimations,
   processScripts,
   processStyles,
+  getPrismStyles,
   metalsmith
 );
