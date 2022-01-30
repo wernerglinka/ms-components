@@ -29,7 +29,7 @@ function initPage() {
   navigation.init();
   loadResponsiveImage.init();
   modalVideo.init();
-  externalLinks.init();
+  //externalLinks.init();
 };
 
 (function() {

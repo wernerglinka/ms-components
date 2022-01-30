@@ -33,6 +33,9 @@ const workingDir = path.join(__dirname, '../');
 const getExternalPages = require('../local_modules/wp-pages');
 const getExternalPagesGraphQL = require('../local_modules/wp-graphql-pages');
 
+const processLinks = require('../local_modules/metalsmith-links');
+
+
 // Define engine options for the inplace and layouts plugins
 const templateConfig = {
   engineOptions: {
@@ -97,6 +100,10 @@ module.exports = function metalsmith(callback) {
     .use(prism({
       lineNumbers: true,
       preLoad: ["java", "scala"]
+    }))
+
+    .use(processLinks({
+      hostNames: ["localhost", "ms-page-sections.netlify.app"]
     }))
 
     .use(
