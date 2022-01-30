@@ -6,7 +6,7 @@ const layouts = require('@metalsmith/layouts');
 const inplace = require('metalsmith-in-place');
 const permalinks = require('@metalsmith/permalinks');
 const writeMetadata = require('metalsmith-writemetadata');
-const linkcheck = require('metalsmith-linkcheck');
+const processLinks = require('metalsmith-links');
 const msif = require('metalsmith-if');
 const prism = require('metalsmith-prism');
 const CaptureTag = require('nunjucks-capture');
@@ -33,7 +33,7 @@ const workingDir = path.join(__dirname, '../');
 const getExternalPages = require('../local_modules/wp-pages');
 const getExternalPagesGraphQL = require('../local_modules/wp-graphql-pages');
 
-const processLinks = require('../local_modules/metalsmith-links');
+//const processLinks = require('../local_modules/metalsmith-links');
 
 
 // Define engine options for the inplace and layouts plugins
@@ -127,13 +127,6 @@ module.exports = function metalsmith(callback) {
         bufferencoding: 'utf8',
       })
     )
-
-    .use(
-      msif(!!util.env.linkcheck, () => {
-        console.log('Checking internal links ******************************');
-      })
-    )
-    .use(msif(!!util.env.linkcheck, linkcheck()))
 
     .build(err => {
       if (err) {

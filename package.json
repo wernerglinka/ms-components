@@ -8,8 +8,7 @@
     "debug": "DEBUG=metalsmith-in-place,metalsmith-layouts node ./build.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "develop": "node ./node_modules/gulp/bin/gulp.js --develop",
-    "buildProd": "node ./node_modules/gulp/bin/gulp.js --production",
-    "linkcheck": "node ./node_modules/gulp/bin/gulp.js --linkcheck"
+    "buildProd": "node ./node_modules/gulp/bin/gulp.js --production"
   },
   "author": "Werner Glinka",
   "license": "MIT",
@@ -43,8 +42,9 @@
     "metalsmith-data-loader": "^1.1.5",
     "metalsmith-if": "^0.1.1",
     "metalsmith-in-place": "^4.4.0",
-    "metalsmith-linkcheck": "^0.3.4",
+    "metalsmith-links": "github:wernerglinka/metalsmith-links",
     "metalsmith-metadata": "^0.0.4",
+    "metalsmith-prism": "github:wernerglinka/metalsmith-prism",
     "metalsmith-writemetadata": "^0.4.5",
     "nunjucks-capture": "^1.0.4",
     "sass": "^1.43.4",
@@ -55,7 +55,6 @@
     "eslint": "^8.3.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
-    "metalsmith-prism": "github:wernerglinka/metalsmith-prism",
     "prettier": "^2.4.1"
   }
 }
