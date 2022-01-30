@@ -3,7 +3,8 @@
 @import "./typography";
 @import "./transitions";
 
-//@import "./prism";
+
+@import "./prism";  // overwrites for prism syntax highlights
 
 @import "./sections/header";
 @import "./sections/footer";

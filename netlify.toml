@@ -1,2 +1,2 @@
 [build]
-  environment = { PRISM_THEME="tomorrow" }
+  environment = { PRISM_THEME="default" }
