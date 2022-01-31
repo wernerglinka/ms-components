@@ -5,14 +5,9 @@ const metadata = require('metalsmith-metadata');
 const layouts = require('@metalsmith/layouts');
 const inplace = require('metalsmith-in-place');
 const permalinks = require('@metalsmith/permalinks');
-const writeMetadata = require('metalsmith-writemetadata');
 const processLinks = require('metalsmith-links');
-const msif = require('metalsmith-if');
 const prism = require('metalsmith-prism');
 const CaptureTag = require('nunjucks-capture');
-
-const util = require('gulp-util');
-
 const showdown = require('showdown');
 const converter = new showdown.Converter();
 
@@ -29,14 +24,8 @@ const trimSlashes = string => string.replace(/(^\/)|(\/$)/g, "");
 const path = require('path');
 const workingDir = path.join(__dirname, '../');
 
-//const monitor = require('../local_modules/metalsmith-monitor');
-const getExternalPages = require('../local_modules/wp-pages');
-const getExternalPagesGraphQL = require('../local_modules/wp-graphql-pages');
-
-//const processLinks = require('../local_modules/metalsmith-links');
-
-
 // Define engine options for the inplace and layouts plugins
+// these options are passed to the Nunjucks templating engine
 const templateConfig = {
   engineOptions: {
     path: [`${workingDir}/layouts`, `${workingDir}/src/sources/assets/icons`],
@@ -68,21 +57,6 @@ module.exports = function metalsmith(callback) {
       buildDate: new Date(),
     })
 
-    // inject pages from wordpress
-    /*
-    .use(getExternalPages({
-      sourceURL: "https://dev-metalsmith.pantheonsite.io/wp-json/wp/v2",
-      contentTypes: ["pages", "things"]
-    }))
-    */
-
-    // inject pages from wordpress
-    // contentTypes arrays need plural and singular of CPTs as they may be different from just having a "s" appended
-    .use(getExternalPagesGraphQL({
-      sourceURL: "https://dev-metalsmith-with-graphql.pantheonsite.io/graphql",
-      contentTypes: [["pages", "page"], ["things", "thing"]]
-    }))
-
     .use(metadata({
       site: "data/siteMetadata.json",
       nav: "data/siteNavigation.json"
@@ -99,7 +73,6 @@ module.exports = function metalsmith(callback) {
 
     .use(prism({
       lineNumbers: true,
-      preLoad: ["java", "scala"]
     }))
 
     .use(processLinks({
@@ -110,21 +83,6 @@ module.exports = function metalsmith(callback) {
       assets({
         source: './src/assets/',
         destination: './assets/',
-      })
-    )
-
-    
-    // Show all metadata for each page in console
-    // Used for Debug only
-    //.use(monitor())
-
-    // Generate a metadata json file for each page
-    // Used for Debug only
-    .use(
-      writeMetadata({
-        pattern: ['**/*.html'],
-        ignorekeys: ['next', 'contents', 'previous'],
-        bufferencoding: 'utf8',
       })
     )
 
