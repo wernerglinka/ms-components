@@ -47,7 +47,7 @@ const templateConfig = {
  *  Function to implement the Metalsmith build process
  */
 module.exports = function metalsmith(callback) {
-  console.log('Building site with metalsmith ************************');
+  console.log('Building site with metalsmith *************************');
 
   Metalsmith(workingDir)
     .source('./src/content')
@@ -72,7 +72,7 @@ module.exports = function metalsmith(callback) {
     .use(layouts(templateConfig))
 
     .use(prism({
-      lineNumbers: true,
+      lineNumbers: true
     }))
 
     .use(processLinks({

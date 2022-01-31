@@ -13,7 +13,7 @@ const paths = require("./paths");
 const isProduction = !!util.env.production;
 
 module.exports = function styles() {
-  console.log('Processing styles ************************');
+  console.log('Processing styles *************************************');
   
   // only create a sourcemap in develop mode
   const withSourceMap = util.env.develop;
