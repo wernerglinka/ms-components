@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wernerglinka/ms-components"
+  },
   "scripts": {
     "start": "node ./build.js",
     "debug": "DEBUG=metalsmith-in-place,metalsmith-layouts node ./build.js",
