@@ -73,7 +73,7 @@ module.exports = function metalsmith(callback) {
 
     .use(prism({
       lineNumbers: true,
-      preLoad: ["scala"]
+      preLoad: ["scala", "java"]
     }))
 
     .use(processLinks({
