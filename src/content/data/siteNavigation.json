@@ -23,17 +23,6 @@
       "isExternal": false
     },
     {
-      "icon": "download",
-      "label": "A Page from Wordpress",
-      "description": "Example of a page that is build with ACF in Wordpress and downloaded via API",
-      "url": "/a-wordpress-page",
-      "submenuID": "",
-      "submenuClass": "",
-      "isButton": false,
-      "buttonClass": "primary",
-      "isExternal": true
-    },
-    {
       "icon": "database",
       "label": "Go Apple",
       "description": "Example of an external link in the main menu.",
