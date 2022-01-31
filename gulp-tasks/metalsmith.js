@@ -5,7 +5,7 @@ const metadata = require('metalsmith-metadata');
 const layouts = require('@metalsmith/layouts');
 const inplace = require('metalsmith-in-place');
 const permalinks = require('@metalsmith/permalinks');
-const processLinks = require('metalsmith-links');
+const processLinks = require('metalsmith-safe-links');
 const prism = require('metalsmith-prism');
 const CaptureTag = require('nunjucks-capture');
 const showdown = require('showdown');
@@ -72,7 +72,8 @@ module.exports = function metalsmith(callback) {
     .use(layouts(templateConfig))
 
     .use(prism({
-      lineNumbers: true
+      lineNumbers: true,
+      preLoad: ["scala"]
     }))
 
     .use(processLinks({
