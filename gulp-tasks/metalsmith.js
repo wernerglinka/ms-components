@@ -8,16 +8,22 @@ const permalinks = require('@metalsmith/permalinks');
 const processLinks = require('metalsmith-safe-links');
 const prism = require('metalsmith-prism');
 const CaptureTag = require('nunjucks-capture');
-const showdown = require('showdown');
-const converter = new showdown.Converter();
+const marked = require('marked');
 
 // functions to extend Nunjucks environment
 const toUpper = string => string.toUpperCase();
 const spaceToDash = string => string.replace(/\s+/g, '-');
 const condenseTitle = string => string.toLowerCase().replace(/\s+/g, '');
-const mdToHTML = string => converter.makeHtml(string);
 const UTCdate = date => date.toUTCString();
 const trimSlashes = string => string.replace(/(^\/)|(\/$)/g, "");
+const mdToHTML = (mdString) => {
+  try {
+    return marked.parse(mdString);
+  } catch (e) {
+    console.error('Error parsing markdown:', e);
+    return mdString;
+  }
+}
 
 // get working directory
 // workingDir is a child of "__dirname"
