@@ -53,7 +53,6 @@
     "metalsmith-writemetadata": "^0.4.5",
     "nunjucks-capture": "^1.0.4",
     "sass": "^1.43.4",
-    "showdown": "^1.9.1",
     "swup": "^2.0.14"
   },
   "devDependencies": {
